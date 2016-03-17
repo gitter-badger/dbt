@@ -5,6 +5,7 @@ import dbt.task.run as run_task
 import dbt.task.compile as compile_task
 import dbt.task.debug as debug_task
 import dbt.task.clean as clean_task
+import dbt.task.install as install_task
 
 
 def main(args):
@@ -24,6 +25,9 @@ def main(args):
 
     sub = subs.add_parser('compile')
     sub.set_defaults(cls=compile_task.CompileTask)
+
+    sub = subs.add_parser('install')
+    sub.set_defaults(cls=install_task.InstallTask)
 
     sub = subs.add_parser('debug')
     sub.set_defaults(cls=debug_task.DebugTask)

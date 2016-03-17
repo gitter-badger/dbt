@@ -2,3 +2,4 @@ argparse
 Jinja2>=2.8
 PyYAML>=3.11
 psycopg2==2.6.1
+GitPython==1.0.2
