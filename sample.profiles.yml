@@ -1,0 +1,23 @@
+# TODO : better docs here. Namely, how it's different than sample.dbt-config.yml
+
+user:
+  # Compile configuration
+  #source-paths: ["model"]   # paths with source code to compile
+  #target-path: "target"     # path for compiled code
+  #clean-targets: ["target"] # directories removed by the clean task
+
+  # Run configuration
+  # output environments
+  outputs:
+    marketing: # uniquely named
+      type: redshift # only type supported
+      port: 5439
+      host: ~~~~~ # any IP or fqdn
+      user: ~~~~~
+      pass: ~~~~~~
+      dbname: ~~~~~~
+      schema: analyst_collective
+
+  #run-target: ~~~~~
+  # Test configuration
+  #test-paths: ["test"]
